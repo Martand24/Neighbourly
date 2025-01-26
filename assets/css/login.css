@@ -39,12 +39,8 @@ body {
   font-size: 48px;
 }
 .logo-img {
-  height: 120px;
-  width: 120px;
-  background-image: url("../images/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 5rem;
+  width: 5rem;
   /* background-color: red; */
 }
 .signin-box {
