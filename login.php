@@ -18,7 +18,9 @@ session_start();
     <div class="main-container">
         <div class="logo-box">
             <div class="inner-logo-box">
-                <div class="logo-img"></div>
+                <div>
+                    <img src="../images/logo.png" class="logo-img" alt="logo image">
+                </div>
                 <div class="logo-up-text">neighbourly</div>
                 <div class="logo-down-text">from your hearts to your neighbours</div>
             </div>
