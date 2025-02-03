@@ -1,0 +1,233 @@
+.body{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.main_content{
+    border: 4px solid white;
+
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 800px;
+    align-items: center;
+    
+}
+
+.nav-bar{
+    height: 50px;
+    width: 100%;
+    background-color: #95b1a7;
+    color: white;
+    display: flex;
+    font-size: medium;
+    font-weight: normal;
+}
+.no-collapse,.myCollapse{
+    display: flex;  
+}
+.no-collapse{
+    width: 65%;
+    justify-content: left;
+}
+.myCollapse{
+    width: 35%;
+    justify-content: right;
+}
+.logo{
+    margin: 2px;
+    height: 20;
+    width: 3rem;
+}
+.nav-share, .nav-explore, .nav-about, .nav-contact{
+    height: fit-content;
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-share:hover, .nav-explore:hover, .nav-about:hover, .nav-contact:hover{
+    text-decoration: underline;
+    color: #495c54;
+}
+.search-bar{
+    width: 100%;
+    height: 100%;
+}
+.search-bar-inner{
+    width:80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.search-box{
+    height: 70%;
+    width:88%;
+    border: none;
+    border-radius: 10px;
+    margin: 8px;
+    display: flex;
+    justify-content: flex-start;
+}
+.search-button{
+    margin: 8px;
+    height: 70%;
+    width: 12%;
+    font-size: x-large;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #566c63;
+}
+.search-button:hover{
+    background-color: #495c54;
+    cursor: pointer;
+}
+.nav-profile{
+    margin: 2px;
+    height: 3rem;
+    width: 3rem;
+}
+
+.sidebar {
+
+    width: 200px;
+    background: #8294a7;
+    color: white;
+    padding: 20px;
+    height: 1100px;
+
+}
+
+.sidebar h2 {
+    text-align: center;
+    text-decoration: ;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background: #34495e;
+}
+
+.sign-out {
+    width: 100%;
+    padding: 10px;
+    background-color: #e2f6ee;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-top: 630px;
+}
+
+
+    
+
+
+.main {
+    flex: 1;
+    padding: 20px;
+    background: #84c0a7;
+}
+
+.profile-container {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #34495e;
+}
+
+
+.uploadPhoto{
+    width: 120px;
+    padding: 2px;
+    background-color: #5b8f7a;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 150px ;
+    border-radius: 10px;
+
+}
+
+.deletePhoto{
+    width: 120px;
+    padding: 2px;
+    background-color: #5b8f7a;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: px ;
+    border-radius: 10px;
+
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background: #27ae60;
+    color: white;
+}
+
+button[type="reset"] {
+    background: #e74c3c;
+    color: white;
+}
+
+
