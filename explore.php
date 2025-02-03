@@ -11,29 +11,8 @@
         <title>Neighbourly</title>
     </head>    
 <body>
-  <div class="nav-bar">
-    <div class="no-collapse">
-        <div>
-            <img src="/logo.png" class="logo" alt="logo">
-        </div>
-        <a class="nav-share" href="/post.php">Share</a>
-        <a class="nav-explore" href="/index1.html">Home</a>
-        <div class="search-bar">
-            <form  class="search-bar-inner" action="search_results.php" method="get">
-                <input type="text" placeholder="Search items" class="search-box">
-                <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    </div>
-    <div class="myCollapse">
-        <a class="nav-about" href="/aboutUs.html">About us</a>
-        <!-- <a class="nav-contact" href="/contactUs.php">Contact Us</a> -->
-        <!-- <a class="nav-profile" href="/user.php"> -->
-            <!-- <img src="/profile.png" class="nav-profile" alt=""> -->
-        <!-- </a> -->
-        <p><a class="lgn-sgn" href="/login.php">Login</a> or <a href="/sigin.php"> Sign up</a></p>
-    </div>
-</div>
+  <!--Navbar-->
+    <?php require './includes/navbar.php'; ?>
 
 <!--location-->
 <div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span> </span> City, State</div>
@@ -240,13 +219,6 @@
 
 
   <!-- footer -->
-  <div class="footer">
-    <p>&copy; 2025 Neighbourly <img src="/logo.png" class="footer-logo" alt="">. All rights reserved.</p>
-    <nav>
-        <a href="/privacy-policy">Privacy Policy</a> | 
-        <a href="/terms-of-service">Terms of Service</a> | 
-        <a href="/contact">Contact Us</a>
-    </nav>
-  </div>
+  <?php require './includes/footer.php'; ?>
 </body>
 </html>
