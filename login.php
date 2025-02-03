@@ -18,9 +18,9 @@ session_start();
     <div class="main-container">
         <div class="logo-box">
             <div class="inner-logo-box">
-                <div>
-                    <img src="../images/logo.png" class="logo-img" alt="logo image">
-                </div>
+		<div >
+			<img src="assets/images/logo.png" alt="logo image" class="logo-img"></img>
+		</div>
                 <div class="logo-up-text">neighbourly</div>
                 <div class="logo-down-text">from your hearts to your neighbours</div>
             </div>
@@ -34,127 +34,124 @@ session_start();
                         <button class="signin">Sign in</button>
                         <!-- <div class="crt-acc-text">Create your account</div> -->
                     </div>
-                </div>
+		</div>
 
 
-                <?php
+<?php
+      include "connection.php";
 
-include "connection.php";
+      if (isset($_POST['login-btn'])) {
 
-if (isset($_POST['login-btn'])) {
+        $email = $_POST['email'];
+        $pass = $_POST['password'];
 
-  $email = $_POST['email'];
-  $pass = $_POST['password'];
+        $sql = "select * from users where email='$email'";
 
-  $sql = "select * from users where email='$email'";
+        $res = mysqli_query($conn, $sql);
 
-  $res = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($res) > 0) {
 
-  if (mysqli_num_rows($res) > 0) {
+          $row = mysqli_fetch_assoc($res);
 
-    $row = mysqli_fetch_assoc($res);
+          $password = $row['password'];
 
-    $password = $row['password'];
-
-    $decrypt = password_verify($pass, $password);
-
-
-    if ($decrypt) {
-      $_SESSION['id'] = $row['id'];
-      $_SESSION['username'] = $row['username'];
-      header("location: index.php");
+          $decrypt = password_verify($pass, $password);
 
 
-    } else {
-      echo "<div class='message'>
-              <p>Wrong Password</p>
-              </div><br>";
-    }
-
-  } else {
-    echo "<div class='message'>
-              <p>Wrong Email or Password</p>
-              </div><br>";
-
-  }
+          if ($decrypt) {
+            $_SESSION['id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            header("location: index.php");
 
 
-} else {}
+          } else {
+            echo "<div class='message'>
+                    <p>Wrong Password</p>
+                    </div><br>";
+          }
+
+        } else {
+          echo "<div class='message'>
+                    <p>Wrong Email or Password</p>
+                    </div><br>";
+
+        }
+
+
+      } else {}
 
 
 ?>
+ <?php
+
+    
+
+          include "connection.php";
+
+          if (isset($_POST['signup-btn'])) {
+
+            $name = $_POST['susername'];
+            $email = $_POST['semail'];
+            $pass = $_POST['pass'];
+	    $cpass = $_POST['cpass'];
+	    $phone = $_POST['phone'];
 
 
-                <?php
+            $check = "select * from users where email='{$email}'";
 
+            $res = mysqli_query($conn, $check);
 
+            $passwd = password_hash($pass, PASSWORD_DEFAULT);
 
-include "connection.php";
-
-if (isset($_POST['signup-btn'])) {
-
-  $name = $_POST['susername'];
-  $email = $_POST['semail'];
-  $pass = $_POST['pass'];
-  $cpass = $_POST['cpass'];
-  $phone = $_POST['phone'];
-
-
-  $check = "select * from users where email='{$email}'";
-
-  $res = mysqli_query($conn, $check);
-
-  $passwd = password_hash($pass, PASSWORD_DEFAULT);
-
-  $key = bin2hex(random_bytes(12));
+            $key = bin2hex(random_bytes(12));
 
 
 
 
-  if (mysqli_num_rows($res) > 0) {
-    echo "<div class='message'>
-<p>This email is used, Try another One Please!</p>
-</div><br>";
+            if (mysqli_num_rows($res) > 0) {
+              echo "<div class='message'>
+        <p>This email is used, Try another One Please!</p>
+        </div><br>";
 
-    //echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
-
-
-  } else {
+              //echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
 
 
-if ($pass === $cpass) {
+            } else {
 
-    $sql = "insert into users(username,email,password,phone_number) values('$name','$email','$passwd','$phone')";
+              if ($pass === $cpass) {
 
-    $result = mysqli_query($conn, $sql);
+                $sql = "insert into users(username,email,password,phone_number) values('$name','$email','$passwd','$phone')";
 
-    if ($result) {
+                $result = mysqli_query($conn, $sql);
 
-      echo "<div class='message'>
-<p>You are registered successfully!</p>
-</div><br>";
+                if ($result) {
 
-     // echo "<a href='login.php'><button class='btn'>Login Now</button></a>";
+                  echo "<div class='message'>
+      <p>You are registered successfully!</p>
+      </div><br>";
 
-    } else {
-      echo "<div class='message'>
-<p>This email is used, Try another One Please!</p>
-</div><br>";
+                 // echo "<a href='login.php'><button class='btn'>Login Now</button></a>";
 
-      //echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
-    }
+                } else {
+                  echo "<div class='message'>
+        <p>This email is used, Try another One Please!</p>
+        </div><br>";
 
-  } else {
-    echo "<div class='message'>
-<p>Password does not match.</p>
-</div><br>";
+                  //echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
+                }
 
-    //echo "<a href='login.php'><button class='btn'>Go Back</button></a>";
-  }
-}
-} else {}
+              } else {
+                echo "<div class='message'>
+      <p>Password does not match.</p>
+      </div><br>";
 
-?>
+                //echo "<a href='login.php'><button class='btn'>Go Back</button></a>";
+              }
+            }
+          } else {}
+
+            ?>
+
 
 
 
@@ -169,9 +166,8 @@ if ($pass === $cpass) {
                     <form action="login.php" class="signin-form hide" method="post">
                         <input class="form-input" type="text" placeholder="Username" id="username" name="susername">
                         <input class="form-input" type="text" placeholder="Email" id="email" name="semail">
-                        <input class="form-input" type="password" placeholder="Password" id="password" name="pass">
-                        <input class="form-input" type="password" placeholder="Confirm Password" id="password"
-                            name="cpass">
+			<input class="form-input" type="password" placeholder="Password" id="password" name="pass"> 
+			<input class="form-input" type="password" placeholder="Confirm Password" id="password" name="cpass">
                         <input class="form-input" type="text" placeholder="Phone number" id="phone-number" name="phone">
                         <button class="submit-button" name="signup-btn">Sign in</button>
                     </form>
@@ -183,3 +179,4 @@ if ($pass === $cpass) {
 </body>
 
 </html>
+
