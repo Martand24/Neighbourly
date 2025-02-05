@@ -31,25 +31,25 @@
 
  <!-- filter section -->
 <form action="" class="filter-categories">
-    <div class="select-category dropdown-box">
-      <p class="dropbtn">All categories <i class="fa-solid fa-caret-down down-arrow" style="font-size: large;"></i></p>
-      <div class="categories">
-        <p>Books</p>
-        <p>Electronic</p>
-        <p>Stationary</p>
-        <p>Home appliances</p>
-        <p>Clothes</p>
-      </div>
+    <div class="dropdown">
+      <select  id="category-box" name="category-box">
+        <option value="category1">All Categories</option>
+        <option value="category2">Books</option>
+        <option value="category3">Electronic</option>
+        <option value="category4">Stationary</option>
+        <option value="category5">Home appliances</option>
+        <option value="category6">Clothes</option>
+      </select>
     </div>
     <input type="text" class="search-box-filter dropdown-box" placeholder="Search item">
-    <div class="select-category dropdown-box">
-      <p class="dropbtn">--Select condition-- <i class="fa-solid fa-caret-down down-arrow" style="font-size: large;"></i></p>
-      <div class="categories">
-        <p>Very Good</p>
-        <p>Good</p>
-        <p>Moderate</p>
-        <p>Bad</p>
-      </div>
+    <div class="dropdown">
+      <select  id="category-box" name="category-box">
+        <option value="category1">Any</option>
+        <option value="category2">Very Good</option>
+        <option value="category3">Good</option>
+        <option value="category4">Moderate</option>
+        <option value="category5">Poor</option>
+      </select>
     </div>
     <button class="filter-button" type="submit">Filter</button>
 </form>
