@@ -5,7 +5,7 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="./assets/css/post.css">
 
 </head>
 
@@ -85,7 +85,7 @@
     </div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-    <script src="post.js"></script>
+    <script src="./assets/js/post.js"></script>
 </body>
 
 </html>
