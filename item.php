@@ -3,40 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-        <link rel="icon"  href="/logo.png">
-        <link rel="stylesheet" href="/item.css">
+        <link rel="icon"  href="./assets/images/logo.png">
+        <link rel="stylesheet" href="./assets/css/item.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Neighbourly</title>
     </head>    
 <body>
-    <div class="nav-bar">
-        <div class="no-collapse">
-            <div>
-                <img src="/logo.png" class="logo" alt="logo">
-            </div>
-            <a class="nav-share" href="/post.php">Share</a>
-            <a class="nav-explore" href="/index1.html">Home</a>
-            <div class="search-bar">
-                <form  class="search-bar-inner" action="search_results.php" method="get">
-                    <input type="text" placeholder="Search items" class="search-box">
-                    <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="myCollapse">
-            <a class="nav-about" href="/aboutUs.html">About us</a>
-            <!-- <a class="nav-contact" href="/contactUs.php">Contact Us</a> -->
-            <a class="nav-profile" href="/user.php">
-                <img src="/profile.png" class="nav-profile" alt="">
-            </a>
-            <!-- <p class="lgn-sgn"><a href="/login.php">Register</a></p> -->
-        </div>
-    </div>
-    
+    <!--navbar-->
+    <?php require './includes/navbar.php'; ?>
+
     <!--location-->
-    <div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span> </span> City, State</div>
+    <div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span class="city"> City,</span> <span class="state"> State</span> </div>
     
     <!-- item details -->
     <div class="item-details">
@@ -168,16 +147,7 @@
             <div class="view-button">View</div>
           </div>
      </div>
-
      <!-- footer -->
-     <div class="footer">
-        <p>&copy; 2025 Neighbourly <img src="/logo.png" class="footer-logo" alt="">. All rights reserved.</p>
-        <nav>
-            <a href="/privacy-policy">Privacy Policy</a> | 
-            <a href="/terms-of-service">Terms of Service</a> | 
-            <a href="/contact">Contact Us</a>
-        </nav>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <?php require './includes/footer.php'; ?>
 </body>
 </html>
