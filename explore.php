@@ -15,7 +15,7 @@
     <?php require './includes/navbar.php'; ?>
 
 <!--location-->
-<div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span> </span> City, State</div>
+<div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span class="user-city">City,</span><span class="user-city">State</span></div>
 
 <!-- category box -->
  <!-- <div class="category-box">
