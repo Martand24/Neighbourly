@@ -15,8 +15,7 @@
     <?php require './includes/navbar.php'; ?>
 
     <!--location-->
-    <div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span class="city"> City,</span> <span class="state"> State</span> </div>
-    
+    <div class="location-bar"><i class="fa-solid fa-location-dot"></i> <span class="user-city">City,</span><span class="user-city">State</span></div>
     <!-- item details -->
     <div class="item-details">
         <div class="item-carousel">
