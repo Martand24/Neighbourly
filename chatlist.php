@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $query);
 <!DOCTYPE html>
 <head>
     <title>Chat List</title>
-    <link rel="stylesheet" href="chatlist.css">
+    <link rel="stylesheet" href="./assets/css/chatlist.css">
 </head>
 <body>
     <div style="text-align: right; margin-bottom: 20px;">
