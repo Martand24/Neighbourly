@@ -56,7 +56,7 @@ $result = mysqli_stmt_get_result($stmt);
 <!DOCTYPE html>
 <head>
     <title>chatbox</title>
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="./assets/css/chat.css">
     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 </head>
 <body>
@@ -92,6 +92,6 @@ $result = mysqli_stmt_get_result($stmt);
     const receiverId = <?= json_encode($receiverId) ?>;
     const receiverUsername = <?= json_encode(htmlspecialchars($receiverUsername)) ?>;
 </script>
-<script src="chat.js"></script>
+<script src="./assets/js/chat.js"></script>
   </body>
 </html>
