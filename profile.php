@@ -31,14 +31,14 @@ if (!isset($_SESSION['username'])) {
         <br>
 
         <ul>
-            <li>Items shared</li>
+            <a href="./itemShared.php"> Items shared</a>
             <li>Items received</li>
             <li>stars</li>
             
             <li>Settings</li>
         </ul>
        
-        <button class="sign-out">Sign out</button>
+        <button class="sign-out" onclick="window.location.href='./includes/logout.php';">Sign out</button>
     </div>
 	
 
