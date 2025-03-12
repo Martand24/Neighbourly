@@ -165,7 +165,7 @@ session_start();
 
                     <form action="login.php" class="signin-form hide" method="post">
                         <input class="form-input" type="text" placeholder="Username" id="username" name="susername">
-                        <input class="form-input" type="text" placeholder="Email" id="email" name="semail">
+                        <input class="form-input" type="email" placeholder="Email" id="email" name="semail">
 			<input class="form-input" type="password" placeholder="Password" id="password" name="pass"> 
 			<input class="form-input" type="password" placeholder="Confirm Password" id="password" name="cpass">
                         <input class="form-input" type="text" placeholder="Phone number" id="phone-number" name="phone">
