@@ -41,21 +41,21 @@ if (!isset($_SESSION['id'])) {
 
 
 	while ($row = $result->fetch_assoc()) {
-
 		$images = json_decode($row['images'], true);
 
     // Check if it's a valid array and has at least one image
     $firstImage = (!empty($images) && is_array($images)) ? $images[0] : './assets/images/logo.png';
-		echo "<div class='item'>";
-		echo "<img src='./" . htmlspecialchars($firstImage) . "' class='image' alt='' style='width:6rem; height:6rem; border-radius:10px; margin:4px;'>";
+                echo "<div class='item'>";
+                echo "<img src='./" . htmlspecialchars($firstImage) . "' class='image' alt='' style='width:6rem; height:6rem; border-radius:10px; margin:4px;'>";
             echo "<div class='item-details'>";
-                echo "<a class='item-category' ><" . htmlspecialchars($row["category"]) . "</a>";
-                echo "<p class='item-name'>" . htmlspecialchars($row["name"]) . "</p>";
-		echo "<p> <b>Shared on : </b><span class='shared-on'>" . htmlspecialchars($row["shared_on"]) . "</span></p>";
+                echo "<a class='item-category' >" . htmlspecialchars($row["category"]) . "</a>";
+                echo "<p class='item-name' onclick=\"window.location.href='./item.php?id=" . htmlspecialchars($row['id']) . "'\">" . htmlspecialchars($row["name"]) . "</p>";
+                echo "<p> <b>Shared on : </b><span class='shared-on'>" . htmlspecialchars($row["shared_on"]) . "</span></p>";
 
                 echo "<p> <b>Shared to : </b> <a  class='shared-to'></a></p>";
            echo " </div>";
-		echo "</div>";
+                echo "</div>";
+
 	}
 
 	$stmt->close();
