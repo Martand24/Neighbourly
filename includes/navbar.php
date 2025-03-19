@@ -20,6 +20,37 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </div>
     <div class="myCollapse">
+<!--         bell-icon -->
+         <i class="fa-solid fa-bell notif_bell" id="bell_icon" style="font-size:30px; cursor: pointer; color:white;margin-top: 7px; margin-right:10px;"></i>
+
+<!--         notification box -->
+            <div class="notif-pop-up-box hidden">
+              <div class="notif-card-request">
+                <div class="text-section">
+                  <a href="" class="user-name">user123</a>
+                  <p>wants to chat</p>
+                  <p>regarding <a href="">book</a></p>
+                </div>
+                <div class="choice-section">
+                  <a  href="" class="accept"><i class="fa-solid fa-check"></i></a>
+                  <a href="" class="reject"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+                <p class="notif-time">21:13</p>
+              </div>
+              <div class="notif-card-received">
+                <div class="text-section">                  
+                  <p><a href="" class="user-name">user123</a> has received your <a href="">book!</a></p>
+                  <p class="notif-time">21:13</p>
+                </div>
+              </div>
+              <div class="notif-card-shared">
+                <div class="text-section">                  
+                  <p><a href="" class="user-name">user123</a> has shared <a href="">book</a> with you!</p>
+                  <button class="verify-receive">Recieved</button>
+                  <p class="notif-time">21:13</p>
+                </div>
+              </div>
+            </div>
         <a class="nav-about" href="/aboutUs.html">About us</a>
         <!-- <a class="nav-contact" href="/contactUs.php">Contact Us</a> -->
         <?php if (isset($_SESSION['id'])): 
