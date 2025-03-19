@@ -1,10 +1,8 @@
 <?php
 // Include the database connection
-$conn = new mysqli("localhost", "root", "1234", "Neighbourly");
+include "connection.php";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
 
 // Check if 'id' is set in the URL
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
@@ -62,8 +60,15 @@ $conn->close();
             <p><b>Location : </b> <span class="city"><?php echo htmlspecialchars($user['address']).", ".htmlspecialchars($user['city']); ?></span><span class="state"><?php echo htmlspecialchars($user['state']); ?></span></p>
             <p><b>Contact : </b><span class="user-email"><?php echo htmlspecialchars($user['email']); ?></span></p>
             <p><b>Phone number : </b><span class="user-phone"><?php echo htmlspecialchars($user['phone_number']); ?></span></p>
-            <button class="message-user"><i class="fa-solid fa-message"></i> Message</button>
-        </div>
+          
+           <button class="message-user" onclick="window.location.href='chat.php?user_id=<?php echo htmlspecialchars($user['id']); ?>'">
+    <i class="fa-solid fa-message"></i> Message
+</button>   
+
+
+
+
+	   </div>
     </div>
 
     <!-- items shared by user -->
