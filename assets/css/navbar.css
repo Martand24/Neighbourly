@@ -44,3 +44,131 @@
     color: #495c54;
 }
 
+
+.search-bar{
+    width: 100%;
+    height: 100%;
+}
+.search-bar-inner{
+    width:80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.search-box{
+    height: 70%;
+    width:88%;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.search-button{
+    margin: 8px;
+    height: 70%;
+    width: 12%;
+    font-size: x-large;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #566c63;
+}
+.search-button:hover{
+    background-color: #495c54;
+    cursor: pointer;
+}
+.nav-profile{
+    height: 3rem;
+    width: 3rem;
+    background-color: inherit;
+    border-radius: 50%;
+}
+
+
+.hidden{
+    display: none;
+}
+.notif-pop-up-box{
+    position: absolute;
+    z-index: 1000;
+    top:3rem;
+    left: 80%;
+    width: 17em;
+    background-color: white;
+    border-radius: 5px;
+}
+.notif-card-request{
+    background-color: white;
+    margin: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgb(200, 199, 199);
+}
+.notif-card-received{
+    background-color: white;
+    margin: 10px;
+    border-bottom: 1px solid rgb(200, 199, 199);
+}
+.notif-card-shared{
+    background-color: white;
+    margin: 10px;
+    border-bottom: 1px solid rgb(200, 199, 199);
+}
+.notif-time{
+    font-size: 12px;
+    margin: 0;
+    color: gray;
+}
+.user-name{
+    text-decoration: none; color:gray; font-weight: bold;
+}
+.user-name:hover{
+    text-decoration: underline;
+}
+.text-section{
+    color: black;
+    font-size: 16px;
+}
+.text-section p{
+    margin: 1px;
+}
+.text-section a{
+    color: #566c63;
+    text-decoration: none;
+}
+.text-section a:hover{
+    color: #495c54;
+    text-decoration: underline;
+}
+.choice-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.choice-section a{
+    margin: 1rem;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.choice-section a:hover{
+    color: #566c63;
+}
+.verify-receive{
+    font-size: 18px;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #566c63;
+}
+.verify-receive:hover{
+        background-color: #495c54;
+    cursor: pointer;
+}
+
