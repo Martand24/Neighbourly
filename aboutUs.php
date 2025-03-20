@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="logo-box">
-            <img src="/logo.png" alt="">
+            <img src="./assets/images/logo.png" alt="">
         </div>
      </div>
 
