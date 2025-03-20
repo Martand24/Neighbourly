@@ -5,6 +5,8 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
+include "./includes/navbar.php";
+
 include "connection.php";
 
 $userId = $_SESSION['id'];
@@ -26,12 +28,10 @@ $result = mysqli_query($conn, $query);
 <head>
     <title>Chat List</title>
     <link rel="stylesheet" href="./assets/css/chatlist.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">  
 </head>
 <body>
-    <div style="text-align: right; margin-bottom: 20px;">
-        <a href="logout.php" style="background-color: #f44336; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Logout</a>
-    </div>
-
+   
     <h1>Chat List</h1>
     <ul>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
@@ -45,5 +45,6 @@ $result = mysqli_query($conn, $query);
             </li>
         <?php endwhile; ?>
     </ul>
+<script src="./assets/js/navbar.js"></script>
 </body>
 </html>
